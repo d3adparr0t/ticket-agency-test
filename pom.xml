@@ -28,6 +28,7 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+        <!--provided-->
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
             <artifactId>hibernate-jpa-2.0-api</artifactId>
@@ -68,6 +69,18 @@
             <groupId>org.jboss.spec.javax.faces</groupId>
             <artifactId>jboss-jsf-api_2.1_spec</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <!--compiled-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.0</version>
         </dependency>
     </dependencies>
 </project>
