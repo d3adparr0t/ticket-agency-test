@@ -1,6 +1,8 @@
 package com.alchesoft.training.jboss.entities;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -12,6 +14,8 @@ import java.util.List;
 
 @Entity
 @Data
+@Builder
+@NoArgsConstructor
 public class SeatType implements Serializable {
 
     @Id
