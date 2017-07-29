@@ -7,12 +7,12 @@ import com.alchesoft.training.jboss.entities.SeatType;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
+import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Logger;
 
 @Stateless
-public class TicketService {
+public class TicketService implements Serializable {
 
     @Inject
     private Logger log;
