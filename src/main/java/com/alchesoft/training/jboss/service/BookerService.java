@@ -28,7 +28,7 @@ public class BookerService implements Serializable {
 
     public void bookSeat(Long seatId, int price) {
         FacesContext fc = FacesContext.getCurrentInstance();
-        if (price > money) {
+        if (price > amount) {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,
                     "Not enough money!",
                     "Registration successful");

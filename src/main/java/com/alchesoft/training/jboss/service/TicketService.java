@@ -1,6 +1,6 @@
 package com.alchesoft.training.jboss.service;
 
-import com.alchesoft.training.jboss.DataManager;
+import com.alchesoft.training.jboss.repositories.DataManager;
 import com.alchesoft.training.jboss.entities.Seat;
 import com.alchesoft.training.jboss.entities.SeatType;
 

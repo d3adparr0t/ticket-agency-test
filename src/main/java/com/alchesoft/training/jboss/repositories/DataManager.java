@@ -1,4 +1,4 @@
-package com.alchesoft.training.jboss;
+package com.alchesoft.training.jboss.repositories;
 
 
 import com.alchesoft.training.jboss.entities.Seat;

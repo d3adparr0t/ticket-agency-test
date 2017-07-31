@@ -1,7 +1,7 @@
 package com.alchesoft.training.jboss.producers;
 
 
-import com.alchesoft.training.jboss.DataManager;
+import com.alchesoft.training.jboss.repositories.DataManager;
 import com.alchesoft.training.jboss.entities.SeatType;
 
 import javax.annotation.PostConstruct;
