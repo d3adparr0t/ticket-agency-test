@@ -41,7 +41,7 @@ public class TicketService implements Serializable {
         }
     }
 
-    public void bookSeat(Long seatId) {
+    public void bookSeat(int seatId) {
         Seat seat = repository.findById(seatId);
         seat.setBooked(true);
         repository.save(seat);

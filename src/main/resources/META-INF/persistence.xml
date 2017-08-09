@@ -9,8 +9,8 @@
         <class>com.alchesoft.training.jboss.entities.Seat</class>
         <class>com.alchesoft.training.jboss.entities.SeatType</class>
         <properties>
-            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+            <property name="hibernate.show_sql" value="true"/>
         </properties>
     </persistence-unit>
 

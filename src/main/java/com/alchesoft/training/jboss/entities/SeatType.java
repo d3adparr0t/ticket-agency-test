@@ -1,5 +1,6 @@
 package com.alchesoft.training.jboss.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,8 @@ import java.util.List;
 @Data
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
+@Table(name="seat_type")
 public class SeatType implements Serializable {
 
     @Id

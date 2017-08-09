@@ -15,7 +15,7 @@ public class DataManager {
     @Inject
     private EntityManager em;
 
-    public Seat findById(Long id) {
+    public Seat findById(int id) {
         return em.find(Seat.class, id);
     }
 

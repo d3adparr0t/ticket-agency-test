@@ -5,5 +5,36 @@
                 xmlns:h="http://java.sun.com/jsf/html"
                 template="/WEB-INF/templates/default.xhtml">
     <ui:define name="content">
+        <h1>Ticket Booker Machine</h1>
+        <h:form id="book">
+            <h3>Amount $ #{bookerService.amount}</h3>
+            <h:messages errorClass="error" infoClass="info" globalOnly="true"/>
+            <h:panelGrid columns="1" border="1" styleClass="smoke">
+                <h:dataTable var="_seat" value="#{seats}" rendered="#{not empty seats}" styleClass="simpletablestyle">
+                    <h:column>
+                        <f:facet name="header">Id</f:facet>
+                        #{_seat.id}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Description</f:facet>
+                        #{_seat.seatType.description}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Price</f:facet>
+                        #{_seat.seatType.price}$
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Book</f:facet>
+                        #{_seat.booked}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Action</f:facet>
+                        <h:commandButton id="book" action="#{bookerService.bookSeat(_seat.id, _seat.seatType.price)}"
+                                         disabled="#{_seat.booked}" value="#{_seat.booked ? 'Reserved' : 'Booked'}"/>
+                    </h:column>
+                </h:dataTable>
+                <h:commandButton id="restart" action="#{ticketController.restart}" value="Restart Application" />
+            </h:panelGrid>
+        </h:form>
     </ui:define>
 </ui:composition>
