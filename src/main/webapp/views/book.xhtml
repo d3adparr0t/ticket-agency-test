@@ -6,7 +6,7 @@
                 template="/WEB-INF/templates/default.xhtml">
     <ui:define name="content">
         <h1>Ticket Booker Machine</h1>
-        <h:form id="book">
+        <h:form id="bookForm">
             <h3>Amount $ #{bookerService.amount}</h3>
             <h:messages errorClass="error" infoClass="info" globalOnly="true"/>
             <h:panelGrid columns="1" border="1" styleClass="smoke">
@@ -24,13 +24,13 @@
                         #{_seat.seatType.price}$
                     </h:column>
                     <h:column>
-                        <f:facet name="header">Book</f:facet>
+                        <f:facet name="header">Booked</f:facet>
                         #{_seat.booked}
                     </h:column>
                     <h:column>
                         <f:facet name="header">Action</f:facet>
                         <h:commandButton id="book" action="#{bookerService.bookSeat(_seat.id, _seat.seatType.price)}"
-                                         disabled="#{_seat.booked}" value="#{_seat.booked ? 'Reserved' : 'Booked'}"/>
+                                         disabled="#{_seat.booked}" value="#{_seat.booked ? 'Reserved' : 'Book'}"/>
                     </h:column>
                 </h:dataTable>
                 <h:commandButton id="restart" action="#{ticketController.restart}" value="Restart Application" />

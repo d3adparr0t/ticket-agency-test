@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
     <groupId>com.alchesoft.training.jboss</groupId>
-    <artifactId>ticket-agency-jpa</artifactId>
+    <artifactId>ticket-agency-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
         <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
