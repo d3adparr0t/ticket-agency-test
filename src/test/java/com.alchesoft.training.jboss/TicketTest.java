@@ -9,13 +9,12 @@ import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import sun.invoke.empty.Empty;
 
 import javax.inject.Inject;
+
 
 import java.util.logging.Logger;
 
@@ -26,7 +25,7 @@ public class TicketTest {
 
     @Deployment
     public static WebArchive createDeployment() {
-        return ShrinkWrap.create(WebArchive.class, "ticket-agency-test-war")
+        return ShrinkWrap.create(WebArchive.class, "ticket-agency-test.war")
                 .addPackage(SeatProducer.class.getPackage())
                 .addPackage(Seat.class.getPackage())
                 .addPackage(TicketService.class.getPackage())
